@@ -1,17 +1,21 @@
 # Note-Taking Application
 
-This project is a note-taking application designed to handle multiple users and their notes. It's built using FastAPI and PostgreSQL to provide a robust backend system. The application is suitable for personal note management and is scalable to support multiple users with secure access and storage.
+This project is a note-taking application designed to handle multiple users and their notes. It's built using FastAPI, PostgreSQL and Faiss to provide a robust backend system. 
+PostgreSQL can be scaled horizontally in case we need to manage million users.
+FastAPI is built to support asynchronous request handling, allowing external service not to block the server process. 
+Faiss search is fast in case of handling vast datasets.
 
 ## Features
 
-- **User Management**: Supports creating users and managing user sessions.
-- **Note Management**: Allows users to create, retrieve, update, and delete notes.
-- **Search Functionality**: Users can search for notes based on content.
+- **User Management**: Supports creating users.
+- **Note Management**: Allows users to create, retrieve.
+- **Search Functionality**: Users can search for notes based on content and ask questions.
 
 ## Requirements
 
 - Python 3.10
 - Docker and Docker Compose
+- OpenAi api key which you need to add in `.env`
 
 ## Local Development Setup
 
@@ -20,8 +24,7 @@ To set up and run the project locally, follow these steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/note-taking-app.git
-cd note-taking-app
+git clone https://github.com/Slava-git/task_uscan.git
 ```
 ### 2. Build and Run with Docker
 
