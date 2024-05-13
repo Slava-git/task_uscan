@@ -6,8 +6,9 @@ class NoteBase(BaseModel):
     content: str
 
 
-class NoteCreate(NoteBase):
-    pass
+class NoteCreate(BaseModel):
+    content: str
+    user_id: int
 
 
 class Note(NoteBase):

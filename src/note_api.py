@@ -6,6 +6,7 @@ from . import schemas
 from . import crud_notes
 from .utils.db import SessionLocal
 from .services.note_service import retrieve_and_rank_notes
+from .services.note_service import create_user_note
 
 app = FastAPI()
 
@@ -20,7 +21,10 @@ def get_db():
 
 @app.post("/notes/", response_model=schemas.Note)
 def create_note(note: schemas.NoteCreate, db: Session = Depends(get_db)):
-    return crud_notes.create_user_note(db=db, note=note, user_id=1)
+    try:
+        return create_user_note(db, note)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
 
 
 @app.get("/notes/", response_model=List[schemas.Note])

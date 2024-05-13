@@ -7,8 +7,8 @@ def get_notes(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.Note).offset(skip).limit(limit).all()
 
 
-def create_user_note(db: Session, note: schemas.NoteCreate, user_id: int):
-    db_note = models.Note(**note.dict(), user_id=user_id)
+def add_note_to_db(db: Session, note_data: schemas.NoteCreate, user_id: int):
+    db_note = models.Note(**note_data.dict(), user_id=user_id)
     db.add(db_note)
     db.commit()
     db.refresh(db_note)
