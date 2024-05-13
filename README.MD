@@ -5,7 +5,7 @@
 This project is a note-taking application designed to handle multiple users and their notes. It's built using FastAPI, PostgreSQL and Faiss to provide a robust backend system.\
 PostgreSQL can be scaled horizontally in case we need to manage million users.\
 FastAPI is built to support asynchronous request handling, allowing external service not to block the server process.\
--- Faiss search is fast in case of handling vast datasets.\
+-- Faiss search is fast in case of handling vast datasets.
 
 ## Entities relationship
 ![Entity Relationship Diagram](https://github.com/Slava-git/task_uscan/blob/master/assets/entities_relationship.png?raw=true)
