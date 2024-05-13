@@ -8,10 +8,12 @@ FastAPI is built to support asynchronous request handling, allowing external ser
 Faiss search is fast in case of handling vast datasets.
 
 ## Entities relationship
-![Entity Relationship Diagram](https://github.com/Slava-git/task_uscan/blob/master/assets/entities_relationship.png?raw=true)
+![Entity Relationship Diagram](https://github.com/Slava-git/task_uscan/blob/master/assets/flow_chart.png?raw=true)
+This diagram illustrates the database schema used in the application, detailing how different entities like users and notes are related.
 
 ## Search chart
-
+![Search Architecture Diagram](https://github.com/yourusername/yourrepository/blob/main/images/search_architecture_diagram.png?raw=true)
+The search architecture diagram provides an overview of the search mechanism within the application, showing how user queries are processed and how notes are retrieved.
 
 ## Features
 
